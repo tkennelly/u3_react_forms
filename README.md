@@ -129,6 +129,20 @@ return (
 
 Remember that JSX **is** JavaScript, so we can't use a reserved word like `for` as an attribute in our label elements. Also, note that we have a button with a type of `submit`. _All_ buttons that do not have a `type` attribute act as a submit for forms by default in HTML, but it's good practice to be specific.
 
+lets give it some style too to keep it a bit cleaner:
+
+```
+.App {
+  text-align: center;
+  color:white;
+}
+#issueType, #subject, #message{
+  display:block;
+  margin: 0 auto;
+}
+```
+
+
 ### Step 3. Add the Form Submit Handler
 
 By convention, we'll give our form submit handler the name `handleSubmit`. We'll then use the event object that the browser passes to it, and prevent the page from being refreshed by using the event's `preventDefault` method. When we're done doing what we need to with the data, we can clear the form by resetting it to it's initialState.
